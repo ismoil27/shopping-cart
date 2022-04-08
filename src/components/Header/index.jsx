@@ -8,12 +8,15 @@ import {
   Navbar,
 } from "react-bootstrap";
 
+import { FaShoppingCart } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
 const Header = () => {
   return (
     <Navbar bg="dark" variant="dark" style={{ height: 80 }}>
       <Container>
         <Navbar.Brand>
-          <a href="/">Shopping Cart</a>
+          <Link to="/"> Shopping Cart </Link>
         </Navbar.Brand>
         <Navbar.Text className="success">
           <FormControl
@@ -25,6 +28,7 @@ const Header = () => {
         <Nav>
           <Dropdown>
             <Dropdown.Toggle variant="success">
+              <FaShoppingCart fontSize="25px" />
               <Badge>{10}</Badge>
             </Dropdown.Toggle>
 
