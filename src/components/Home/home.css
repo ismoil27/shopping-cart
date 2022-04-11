@@ -8,3 +8,10 @@
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
+/* @media (max-width: 771px) {
+  .productContainer {
+    padding: 0;
+    width: 58%;
+  }
+} */

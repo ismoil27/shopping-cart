@@ -20,6 +20,7 @@ const Header = () => {
   const {
     state: { cart },
     dispatch,
+    productDispatch,
   } = CartState();
 
   return (
@@ -32,7 +33,13 @@ const Header = () => {
           <FormControl
             style={{ width: 500 }}
             placeholder="Search a Product"
-            className="m-auto"
+            className="m-auto search"
+            onChange={(e) =>
+              productDispatch({
+                type: "FILTER_BY_SEARCH",
+                payload: e.target.value,
+              })
+            }
           />
         </Navbar.Text>
         <Nav>
